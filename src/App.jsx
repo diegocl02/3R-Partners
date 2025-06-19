@@ -1,14 +1,16 @@
 import { useState } from 'react';
 import './App.css';
-import  Navbar from './components/Navbar'
+import Navbar from './components/Navbar';
+import { useTranslation } from 'react-i18next'; // <-- Importa useTranslation
 
 function App() {
-  // Estado para controlar la visibilidad de los enlaces de contacto
+  const { t } = useTranslation(); // <-- Inicializa el hook de traducción
+
   const [showContactLinks, setShowContactLinks] = useState(false);
 
   const handleLearnMoreClick = (event) => {
-    event.preventDefault(); // Evita que el enlace recargue la página o navegue
-    setShowContactLinks(true); // Cambia el estado para mostrar los enlaces
+    event.preventDefault();
+    setShowContactLinks(true);
   };
 
   return (
@@ -21,17 +23,15 @@ function App() {
         </video>
         <div className="content-wrapper">
           <div className="content">
-            <h1>Welcome to 3R Partners</h1>
-            <p>At 3R Partners, we don’t just consult — we <em>create</em>. </p>
-            <p> We help businesses transform ideas into rock-solid digital experiences </p>
+            <h1>{t('welcomeMessage')}</h1> {/* <-- Traduce el título */}
+            <p>{t('sloganPart1')}</p>      {/* <-- Traduce el primer párrafo */}
+            <p>{t('sloganPart2')}</p>      {/* <-- Traduce el segundo párrafo */}
 
-            {/* Renderizado condicional: Si showContactLinks es falso, muestra el botón */}
             {!showContactLinks ? (
               <a href="/learn-more" className="btn-hero" onClick={handleLearnMoreClick}>
-                Contact Us
+                {t('contactUsButton')} {/* <-- Traduce el texto del botón */}
               </a>
             ) : (
-              // Si showContactLinks es verdadero, muestra los enlaces
               <div className="contact-links-container">
                 <a
                   href="https://wa.me/TUNUMERODEWHATSAPP?text=Hola!%20Me%20interesa%20obtener%20m%C3%A1s%20informaci%C3%B3n."

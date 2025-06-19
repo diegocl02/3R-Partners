@@ -1,15 +1,17 @@
 .navbar {
-  background-color: transparent; /* Adjust background color as needed */
+  background-color: transparent; /* Ajusta el color de fondo según necesites */
   padding: 10px 20px;
   width: 100%;
 }
 
 .navbar-container {
   display: flex;
-  justify-content: flex-start; /* Aligns logo to the left */
+  justify-content: space-between; /* <-- ¡CAMBIO IMPORTANTE AQUÍ! */
+  /* Esto empuja el 'navbar-logo' a la izquierda y 'navbar-actions' a la derecha */
   align-items: center;
-  max-width: 1300px; /* Adjust max-width as needed */
+  max-width: 1300px; /* Ajusta el ancho máximo según necesites */
   margin: 0 auto;
+  height: 60px; /* Asegura una altura consistente para el navbar */
 }
 
 .navbar-logo {
@@ -18,6 +20,63 @@
 }
 
 .logo-img {
-  height: 50px; /* Adjust size as needed */
+  height: 50px; /* Ajusta el tamaño según necesites */
   width: auto;
+}
+
+/* --- Nuevos estilos para el contenedor de acciones --- */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espacio entre el selector de idioma y el botón de Login */
+}
+
+.language-switcher {
+  /* margin-left: auto; <-- ¡YA NO ES NECESARIO AQUÍ! */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre los botones de idioma */
+}
+
+.language-switcher button {
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.language-switcher button:hover:not(:disabled) {
+  background-color: #555;
+}
+
+.language-switcher button:disabled {
+  background-color: #007bff; /* Resalta el idioma activo */
+  color: white;
+  border-color: #007bff;
+  cursor: default;
+}
+
+.language-switcher .active-lang {
+    font-weight: bold;
+    /* Puedes añadir más estilos aquí para que se destaque */
+}
+
+/* --- Estilos para el botón de Login --- */
+.login-button {
+  background-color: #122c9c; /* Un color azul primario, cámbialo a tu gusto */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  white-space: nowrap; /* Evita que el texto del botón se rompa en varias líneas */
+}
+
+.login-button:hover {
+  background-color: #3551ed; /* Un azul más oscuro al pasar el ratón */
 }
