@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage":"https://diegocl02.github.io/3R-Partners/",
+  "homepage": "https://diegocl02.github.io/3R-Partners/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,8 +13,11 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "i18next-browser-languagedetector": "^8.2.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-i18next": "^15.6.0",
+    "react-router-dom": "^7.6.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

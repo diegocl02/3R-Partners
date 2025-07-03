@@ -4,5 +4,12 @@
   "sloganPart1": "At 3R Partners, we don’t just consult — we create.",
   "sloganPart2": "We help businesses transform ideas into rock-solid digital experiences.",
   "contactUsButton": "Contact Us",
-  "loginButton": "Login"
+  "loginButton": "Login",
+   "loginTitle": "Login",
+  "loginSubtitle": "Enter your details to access your account.",
+  "emailLabel": "Email",
+  "emailPlaceholder": "Your email address",
+  "passwordLabel": "Password",
+  "passwordPlaceholder": "Your password",
+  "forgotPassword": "Forgot your password?"
 }

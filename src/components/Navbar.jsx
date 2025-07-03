@@ -2,11 +2,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Navbar.css';
 import { useTranslation } from 'react-i18next';
-// import { useNavigate } from 'react-router-dom'; // Descomenta si ya lo estás usando
+import { useNavigate } from 'react-router-dom'; // <-- ¡Descomenta esta línea!
 
 function Navbar() {
   const { t, i18n } = useTranslation();
-  // const navigate = useNavigate(); // Descomenta si ya lo estás usando
+  const navigate = useNavigate(); // <-- ¡Descomenta esta línea y llama al hook!
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -32,9 +32,10 @@ function Navbar() {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  // ¡MODIFICA ESTA FUNCIÓN!
   const handleLoginClick = () => {
-    // navigate('/login'); // Usa esto si ya tienes React Router
-    alert('Redirigiendo a la página de Login...');
+    navigate('/login'); // <-- ¡Ahora usará useNavigate para ir a /login!
+    // alert('Redirigiendo a la página de Login...'); // <-- Puedes eliminar o comentar esta línea
   };
 
   // Determinar el idioma actual para mostrar en el botón
@@ -53,7 +54,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <a href="/" className="navbar-logo">
-          <img src="/3R.svg" alt="3R Partners" className="logo-img" />
+          <img src="/logo3Rok.svg" alt="3R Partners" className="logo-img" />
         </a>
 
         <div className="navbar-actions">

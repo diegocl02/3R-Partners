@@ -72,9 +72,9 @@
 
 .dropdown-menu {
   position: absolute;
-  top: 100%; /* Posiciona el menú justo debajo del botón */
+  top: 110%; /* Posiciona el menú justo debajo del botón */
   left: 0;
-  background-color: #444; /* Fondo del menú desplegable */
+  background-color: #5f5f5f; /* Fondo del menú desplegable */
   min-width: 120px; /* Ancho mínimo para las opciones */
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   z-index: 1; /* Asegura que esté sobre otros elementos */
@@ -122,54 +122,51 @@
   box-shadow: 0 0 3px rgba(0,0,0,0.2); /* Opcional: una sombra suave */
 }
 
-/* --- Media Queries para Responsive (mantén los que ya tenías y añade para el dropdown) --- */
-
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .navbar-container {
-    padding: 10px 15px;
+    /* Aseguramos que el flexbox se mantenga para logo a izquierda y botones a derecha */
+    flex-direction: row; /* Asegura que los elementos estén en fila */
+    justify-content: space-between; /* Logo a la izquierda, acciones a la derecha */
+    align-items: center; /* Centra verticalmente */
+    padding: 0 15px; /* Ajusta el padding lateral para pantallas pequeñas si es necesario */
   }
 
   .navbar-logo .logo-img {
-    height: 40px;
+    height: 40px; /* Ajusta el tamaño del logo para móvil si es necesario */
   }
 
   .navbar-actions {
-    gap: 10px;
+    /* Este contenedor también es un flexbox si necesitas organizar sus elementos */
+    /* Asegúrate de que los elementos dentro de navbar-actions se comporten como deseas */
+    gap: 10px; /* Reduce el espacio entre los botones si es necesario */
   }
 
-  .language-toggle-btn,
-  .login-button {
-    font-size: 0.85rem;
-    padding: 6px 12px;
-  }
-}
+  /* ... (otros estilos para móvil que ya tengas, como los botones de contacto) ... */
 
-@media (max-width: 480px) {
-  .navbar-container {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-    align-items: center;
-    gap: 10px;
+  .contact-button-desktop {
+    display: none; /* Ocultar el botón de contacto de escritorio en móvil */
   }
 
-  .navbar-actions {
-    width: 100%;
-    justify-content: center;
-    gap: 10px;
+  .contact-button-mobile {
+    display: block; /* Mostrar el botón de contacto móvil */
+    width: 100%; /* Ocupa todo el ancho disponible en el menú desplegable */
+    margin-top: 10px; /* Espacio superior para separarlo de los idiomas */
+    padding: 10px; /* Aumentar el padding para mejor toque */
+    text-align: center; /* Centrar el texto */
+    box-sizing: border-box; /* Incluir padding y borde en el ancho total */
   }
 
   .language-dropdown {
-    width: 100%; /* El contenedor del dropdown ocupa todo el ancho */
-    text-align: center;
+    /* Ajusta la posición del dropdown para móvil si es necesario */
+    right: 0; /* Asegura que el dropdown se alinee a la derecha */
+    left: auto; /* Desactiva la alineación a la izquierda si estaba activa */
   }
-  .language-toggle-btn {
-    width: 100%; /* El botón del dropdown ocupa todo el ancho */
-    justify-content: center; /* Centra el texto y el icono */
-  }
-  .dropdown-menu {
-    left: 50%; /* Centra el menú desplegable horizontalmente */
-    transform: translateX(-50%); /* Ajuste para un centrado real */
-    min-width: 150px; /* Asegura un ancho mínimo razonable */
+
+  .language-dropdown .dropdown-menu {
+    /* Ajusta el menú desplegable para móvil */
+    right: 0; /* Alinea el menú desplegable a la derecha */
+    left: auto; /* Desactiva la alineación a la izquierda si estaba activa */
+    min-width: unset; /* Elimina ancho mínimo fijo si interfiere */
+    width: max-content; /* Se ajusta al contenido más largo */
   }
 }

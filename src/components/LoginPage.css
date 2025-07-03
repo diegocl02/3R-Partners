@@ -1,0 +1,91 @@
+/* src/components/LoginPage.css */
+
+.login-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px); /* 100% de la altura de la ventana menos la altura del navbar */
+  background-color: #f0f2f5;
+  padding: 20px;
+}
+
+.login-form-card {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Ancho máximo del formulario */
+  text-align: center;
+}
+
+.login-form-card h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.login-form-card p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.login-submit-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.forgot-password-link {
+  display: block;
+  margin-top: 20px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.forgot-password-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
