@@ -38,6 +38,9 @@ function Navbar() {
     // alert('Redirigiendo a la página de Login...'); // <-- Puedes eliminar o comentar esta línea
   };
 
+   console.log("Navbar: Idioma actual de i18n ->", i18n.language);
+  console.log("Navbar: isDropdownOpen ->", isDropdownOpen);
+
   // Determinar el idioma actual para mostrar en el botón
   const currentLanguageText = i18n.language === 'es' ? 'Español' : 'English';
 

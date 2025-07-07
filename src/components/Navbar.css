@@ -77,9 +77,9 @@
   background-color: #5f5f5f; /* Fondo del menú desplegable */
   min-width: 120px; /* Ancho mínimo para las opciones */
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  z-index: 1; /* Asegura que esté sobre otros elementos */
+  z-index: 100; /* Asegura que esté sobre otros elementos */
   border-radius: 5px;
-  overflow: hidden; /* Para esquinas redondeadas en los botones internos */
+  overflow: hidden;/* Para esquinas redondeadas en los botones internos */
 }
 
 .dropdown-menu button {
