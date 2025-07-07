@@ -2,11 +2,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Navbar.css';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom'; // <-- ¡Descomenta esta línea!
+import { useNavigate } from 'react-router-dom'; 
 
 function Navbar() {
   const { t, i18n } = useTranslation();
-  const navigate = useNavigate(); // <-- ¡Descomenta esta línea y llama al hook!
+  const navigate = useNavigate();
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
