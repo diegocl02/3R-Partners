@@ -1,4 +1,5 @@
 // src/components/Navbar.jsx
+
 import React, { useState, useEffect, useRef } from 'react';
 import './Navbar.css';
 import { useTranslation } from 'react-i18next';
@@ -51,6 +52,7 @@ function Navbar() {
     } else {
       return '/flags/us.svg'; // Ruta a la bandera de Estados Unidos (por defecto para 'en')
     }
+
   };
 
   return (
@@ -59,6 +61,7 @@ function Navbar() {
         <a href="/" className="navbar-logo">
           <img src="/logo3Rok.svg" alt="3R Partners" className="logo-img" />
         </a>
+
 
         <div className="navbar-actions">
           <div className="language-dropdown" ref={dropdownRef}>
@@ -94,6 +97,7 @@ function Navbar() {
 
           <button className="login-button" onClick={handleLoginClick}>
             {t('loginButton')}
+
           </button>
         </div>
       </div>

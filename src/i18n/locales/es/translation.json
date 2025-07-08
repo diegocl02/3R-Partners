@@ -4,6 +4,7 @@
   "sloganPart1": "En 3R Partners, no solo consultamos, ¡creamos!",
   "sloganPart2": "Ayudamos a las empresas a transformar ideas en experiencias digitales sólidas.",
   "contactUsButton": "Contáctanos",
+
   "loginButton": "Iniciar Sesión",
   "loginTitle": "Iniciar Sesión",
   "loginSubtitle": "Introduce tus datos para acceder a tu cuenta.",
@@ -12,4 +13,5 @@
   "passwordLabel": "Contraseña",
   "passwordPlaceholder": "Tu contraseña",
   "forgotPassword": "¿Olvidaste tu contraseña?"
+
 }

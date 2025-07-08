@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
+
 import { useTranslation } from 'react-i18next';
 
 // 1. Importar componentes de React Router Dom
@@ -12,6 +13,7 @@ import LoginPage from './components/LoginPage';
 
 function App() {
   const { t } = useTranslation();
+
 
   const [showContactLinks, setShowContactLinks] = useState(false);
 
@@ -65,7 +67,7 @@ function App() {
                     )}
                   </div>
                 </div>
-              </div>
+            </div>
             }
           />
 
